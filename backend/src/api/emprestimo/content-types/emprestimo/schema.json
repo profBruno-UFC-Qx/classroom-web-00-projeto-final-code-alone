@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "emprestimos",
+  "info": {
+    "singularName": "emprestimo",
+    "pluralName": "emprestimos",
+    "displayName": "Emprestimo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Data_emprestimo": {
+      "type": "date",
+      "required": false
+    },
+    "Data_devolucao_prevista": {
+      "type": "date"
+    },
+    "data_devolucao_real": {
+      "type": "date"
+    },
+    "Multa_acumulada": {
+      "type": "decimal"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "emprestimos"
+    },
+    "exemplars": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exemplar.exemplar"
+    }
+  }
+}
