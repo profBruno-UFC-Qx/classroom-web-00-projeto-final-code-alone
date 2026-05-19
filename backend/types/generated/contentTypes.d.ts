@@ -556,7 +556,7 @@ export interface ApiLivroLivro extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Autores: Schema.Attribute.JSON;
+    Autores: Schema.Attribute.String;
     Capa_URL: Schema.Attribute.String;
     Categoria: Schema.Attribute.Enumeration<['Geral', 'Infantil']>;
     createdAt: Schema.Attribute.DateTime;
@@ -568,7 +568,7 @@ export interface ApiLivroLivro extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::livro.livro'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Titulo: Schema.Attribute.String & Schema.Attribute.Required;
+    Titulo: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

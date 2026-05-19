@@ -11,16 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Titulo": {
-      "type": "string",
-      "required": true
-    },
     "ISBN": {
       "type": "uid",
       "required": true
     },
     "Autores": {
-      "type": "json"
+      "type": "string"
+    },
+    "Titulo": {
+      "type": "string",
+      "required": false
     },
     "Capa_URL": {
       "type": "string"

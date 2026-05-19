@@ -1,6 +1,6 @@
 export default {
   // Executa todos os dias à meia-noite (00:00)
-  '* * * * *': async ({ strapi }: { strapi: any }) => {
+  '0 0 * * *': async ({ strapi }: { strapi: any }) => {
     console.log('====== [CRON] Iniciando cálculo diário de multas do BibliQX ======');
 
     try {
