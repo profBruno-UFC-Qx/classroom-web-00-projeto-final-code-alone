@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "livros",
+  "info": {
+    "singularName": "livro",
+    "pluralName": "livros",
+    "displayName": "Livro"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ISBN": {
+      "type": "uid",
+      "required": true
+    },
+    "Autores": {
+      "type": "string"
+    },
+    "Titulo": {
+      "type": "string",
+      "required": false
+    },
+    "Capa_URL": {
+      "type": "string"
+    },
+    "Categoria": {
+      "type": "enumeration",
+      "enum": [
+        "Geral",
+        "Infantil"
+      ]
+    },
+    "exemplars": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exemplar.exemplar",
+      "mappedBy": "livro"
+    }
+  }
+}
